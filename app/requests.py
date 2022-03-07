@@ -67,7 +67,7 @@ def process_sources(source_list):
     for source in source_list:
         source_object = FullSource(**source)
         sources.append(source_object)
-
+        
     return sources
 
 def process_sources_articles(source_list):

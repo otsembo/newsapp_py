@@ -1,5 +1,7 @@
 from flask import render_template
 from app import news_app
+import urllib 
+import werkzeug
 
 @news_app.errorhandler(404)
 def four_Ow_four(error):
