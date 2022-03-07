@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+       {{ macro.displaySources(sources_list) }}
+    </div>
+</div>
+{% endblock %}

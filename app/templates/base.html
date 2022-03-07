@@ -1,0 +1,32 @@
+{% import 'macros.html' as macro %}
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>Welcome to the News App</title>
+        {% endif %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav class="purple">
+            <div class="nav-wrapper">
+              <form action="./search" method="post">
+                <div class="input-field">
+                  <input id="search" type="search" required placeholder="Search" name="search">
+                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  <i class="material-icons">close</i>
+                </div>
+              </form>
+            </div>
+          </nav>
+    
+        {% block content %}
+        {% endblock %}
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+</html>
